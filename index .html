@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MD Trader Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>MD Trader Analyzer</h1>
+    </header>
+    <div class="container">
+        <section id="login-section" class="login-section">
+            <form id="login-form">
+                <label for="platform-url">رابط منصة التداول:</label>
+                <input type="text" id="platform-url" name="platform-url" required>
+                <label for="email">البريد الإلكتروني:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">كلمة المرور:</label>
+                <input type="password" id="password" name="password" required>
+                <div id="verification-section" style="display: none;">
+                    <label for="verification-code">رمز التحقق:</label>
+                    <input type="text" id="verification-code" name="verification-code">
+                </div>
+                <button type="submit">تسجيل الدخول</button>
+            </form>
+        </section>
+        <section class="analysis-section" style="display: none;">
+            <form id="analysis-form">
+                <label for="pair">تحليل زوج عملات:</label>
+                <input type="text" id="pair" name="pair" required>
+                <button type="submit">تحليل</button>
+            </form>
+            <div id="results"></div>
+        </section>
+        <div class="catalog">
+            <h2>كتالوغ الأوامر</h2>
+            <ul>
+                <li>/set_pairs - لتحديد أزواج العملات</li>
+                <li>/set_multipliers - لتحديد استخدام المضاعفات</li>
+                <li>/set_study_days - لتحديد مدة الدراسة</li>
+                <li>/set_success_rate - لتحديد نسبة النجاح المرغوبة</li>
+                <li>/analyze [pair] - لتحليل زوج عملات</li>
+                <li>/report - للحصول على تقرير</li>
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
